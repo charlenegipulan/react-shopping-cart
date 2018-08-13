@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ProductList from './components/ProductList/ProductList';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
           <h1 className="App-title">Marble, Inc.</h1>
         </header>
         <main>
-          <p> main area </p>
+          <ProductList />
         </main>
       </div>
     );
