@@ -9,6 +9,7 @@ export default (props) => (
         <div className="ProductList-Products">
             {
                 props.products.map(p => <Product 
+                    key={p.sku}
                     product={p} 
                     handleAddItem={props.handleAddItem}
                 />)
