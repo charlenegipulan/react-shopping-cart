@@ -8,8 +8,10 @@ export default (props) => (
         <hr />
         <div className="ProductList-Products">
             {
-                props.products.map(p => <Product product={p} />)
-                
+                props.products.map(p => <Product 
+                    product={p} 
+                    handleAddItem={props.handleAddItem}
+                />)
             }
         </div>
     </section>

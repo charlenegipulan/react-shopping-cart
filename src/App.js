@@ -31,7 +31,10 @@ class App extends Component {
           <h1 className="App-title">Charlene, Inc.</h1>
         </header>
         <main>
-          <ProductList products={products}/>
+          <ProductList 
+            products={products}
+            handleAddItem={this.handleAddItem}
+            />
           <Cart cart={this.state.cart} />
         </main>
       </div>

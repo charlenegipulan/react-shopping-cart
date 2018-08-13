@@ -9,7 +9,7 @@ export default (props) => (
             <p> {props.product.description} </p>
             <div>
                 <span>{props.product.sku}</span>
-                <button>ADD TO CART</button>
+                <button onClick={() => props.handleAddItem(props.product)} >ADD TO CART</button>
                 <span>{props.product.price}</span>
             </div>
         </div>
