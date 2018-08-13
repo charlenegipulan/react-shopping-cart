@@ -1,5 +1,9 @@
 .Cart {
     width: 30%;
     padding: 20px;
-    background-color: lightgray;
+    background-color: #F7F6F5;
+}
+
+.Cart h2 {
+    font-size: 50px;
 }
