@@ -12,6 +12,18 @@ class App extends Component {
       cart: []
     }
   }
+
+  handleAddItem = (product) => {
+    this.setState(prevState => {
+      let item = {
+        product,
+        quantity: 1
+      };
+      let newCart = prevState.cart.concat(item);
+      return {cart: newCart};
+    });
+  }
+
   render() {
     return (
       <div className="App">

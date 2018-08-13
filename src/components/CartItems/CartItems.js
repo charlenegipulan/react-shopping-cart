@@ -4,6 +4,6 @@ import CartItem from '../CartItem/CartItem';
 
 export default (props) => (
     <div className="CartItems">
-        <CartItem />
+        {props.cart.map(item => <CartItem item={item} />)}
     </div>
 );
