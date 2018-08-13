@@ -1,0 +1,6 @@
+.Product {
+    width: 350px;
+    min-height: 350px;
+    border: 2px solid lightgray;
+    margin: 10px 10px 40px;
+}

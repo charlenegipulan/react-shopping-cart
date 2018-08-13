@@ -1,7 +1,14 @@
 import React from 'react';
+import './ProductList.css';
+import Product from '../Product/Product';
 
 export default (props) => (
-    <section>
+    <section className="ProductList">
         <h2>Product List</h2>
+        <div className="ProductList-Products">
+            {
+                props.products.map(p => <Product product={p} />)
+            }
+        </div>
     </section>
 );
