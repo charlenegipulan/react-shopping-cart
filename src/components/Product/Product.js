@@ -4,6 +4,13 @@ import './Product.css';
 export default (props) => (
     <article className="Product">
         <img src={'//placeimg.com/346/150/animals'} alt={props.product.name} />
-        <h3> {props.product.name} </h3>
+        <div>
+            <h3> {props.product.name} </h3>
+            <p> {props.product.description} </p>
+            <div>
+                <span>{props.product.sku}</span>
+                <span>{props.product.price}</span>
+            </div>
+        </div>
     </article>
 );

@@ -8,6 +8,7 @@ export default (props) => (
         <div className="ProductList-Products">
             {
                 props.products.map(p => <Product product={p} />)
+                
             }
         </div>
     </section>
