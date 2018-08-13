@@ -15,14 +15,21 @@ class App extends Component {
 
   handleAddItem = (product) => {
     this.setState(prevState => {
-      let item = {
-        product,
-        quantity: 1
-      };
-      let newCart = prevState.cart.concat(item);
-      return {cart: newCart};
-    });
-  }
+      let item = prevState.cart.find(item => item.product === product);
+      var newCart;
+      if (item) {
+        item.quantity++;
+        newCart = prevState.cart;
+      } else {
+        item = {
+          product,
+          quantity: 1
+        };
+        newCart = prevState.cart.concat(item);
+    };
+    return {cart: newCart};
+  });
+}
 
   render() {
     return (
