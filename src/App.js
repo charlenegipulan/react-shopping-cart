@@ -31,6 +31,19 @@ class App extends Component {
   });
 }
 
+handleRemoveItem = (product) => {
+  this.setState(prevState => {
+    var itemIdx = prevState.cart.findIndex(item => item.product === product);
+    var item = prevState.cart[itemIdx];
+    if (item.quantity === 1) {
+      prevState.cart.splice(itemIdx, 1);
+    } else {
+      item.quantity--;
+    }
+    return prevState;
+  });
+}
+
   render() {
     return (
       <div className="App">
@@ -42,7 +55,10 @@ class App extends Component {
             products={products}
             handleAddItem={this.handleAddItem}
             />
-          <Cart cart={this.state.cart} />
+          <Cart 
+            cart={this.state.cart} 
+            handleRemoveItem={this.handleRemoveItem}
+          />
         </main>
       </div>
     );

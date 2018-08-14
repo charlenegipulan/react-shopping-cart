@@ -3,6 +3,9 @@ import './CartItem.css';
 
 export default (props) => (
     <div className="CartItem">
-        <p>Qty: <span>{props.item.quantity} </span>&nbsp;{props.item.product.name} </p>
+        <p>Qty: 
+            <button onClick={() => props.handleRemoveItem(props.item.product)}> - </button>
+            <span>{props.item.quantity} </span>&nbsp;{props.item.product.name} 
+        </p>
     </div>
 );

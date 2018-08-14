@@ -5,6 +5,9 @@ import CartItems from '../CartItems/CartItems';
 export default (props) => (
     <section className="Cart">
         Cart Items
-        <CartItems cart={props.cart} />
+        <CartItems 
+        cart={props.cart}
+        handleRemoveItem={props.handleRemoveItem}
+        />
     </section>
 );
